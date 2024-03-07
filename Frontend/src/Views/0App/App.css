@@ -1,0 +1,8 @@
+.appMainContainer {
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+.contentContainer {
+    padding: 1rem;
+}

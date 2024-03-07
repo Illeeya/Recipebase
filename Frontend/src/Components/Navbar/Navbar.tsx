@@ -1,4 +1,10 @@
+import { useContext } from "react";
+import { NavbarContext } from "../../Context/NavbarContext";
+import { NavbarContextType } from "../../Types/Context/NavbarContextTypes";
+
 const Navbar = () => {
+    const { navbarElement, changeNavbarItem } = useContext(NavbarContext) as NavbarContextType;
+
     return (
         <>
             <nav className="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
@@ -20,64 +26,50 @@ const Navbar = () => {
                     <div className="collapse navbar-collapse" id="navbarColor01">
                         <ul className="navbar-nav me-auto">
                             <li className="nav-item">
-                                <a className="nav-link active" href="#">
+                                <a
+                                    className={`nav-link ${
+                                        navbarElement === "Home" ? "active" : ""
+                                    }`}
+                                    href="#"
+                                    onClick={() => changeNavbarItem("Home")}
+                                >
                                     Home
-                                    <span className="visually-hidden">(current)</span>
                                 </a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#">
+                                <a
+                                    className={`nav-link ${
+                                        navbarElement === "RecipeList" ? "active" : ""
+                                    }`}
+                                    href="#"
+                                    onClick={() => changeNavbarItem("RecipeList")}
+                                >
                                     Recipe List
                                 </a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#">
+                                <a
+                                    className={`nav-link ${
+                                        navbarElement === "AddRecipe" ? "active" : ""
+                                    }`}
+                                    href="#"
+                                    onClick={() => changeNavbarItem("AddRecipe")}
+                                >
                                     Add Recipe
                                 </a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#">
+                                <a
+                                    className={`nav-link ${
+                                        navbarElement === "Favorites" ? "active" : ""
+                                    }`}
+                                    href="#"
+                                    onClick={() => changeNavbarItem("Favorites")}
+                                >
                                     Favorites
                                 </a>
                             </li>
-                            <li className="nav-item dropdown">
-                                <a
-                                    className="nav-link dropdown-toggle"
-                                    data-bs-toggle="dropdown"
-                                    href="#"
-                                    role="button"
-                                    aria-haspopup="true"
-                                    aria-expanded="false"
-                                >
-                                    Settings
-                                </a>
-                                <div className="dropdown-menu">
-                                    <a className="dropdown-item" href="#">
-                                        Setting 1
-                                    </a>
-                                    <a className="dropdown-item" href="#">
-                                        Setting 2
-                                    </a>
-                                    <a className="dropdown-item" href="#">
-                                        Setting 3
-                                    </a>
-                                    <div className="dropdown-divider"></div>
-                                    <a className="dropdown-item" href="#">
-                                        Setting 4
-                                    </a>
-                                </div>
-                            </li>
                         </ul>
-                        {/* <form className="d-flex">
-                            <input
-                                className="form-control me-sm-2"
-                                type="search"
-                                placeholder="Search"
-                            />
-                            <button className="btn btn-secondary my-2 my-sm-0" type="submit">
-                                Search
-                            </button>
-                        </form> */}
                     </div>
                 </div>
             </nav>
