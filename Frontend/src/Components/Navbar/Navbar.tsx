@@ -1,6 +1,8 @@
 import { useContext } from "react";
 import { NavbarContext } from "../../Context/NavbarContext";
 import { NavbarContextType } from "../../Types/Context/NavbarContextTypes";
+import titleImage from "../../Assets/Img/RecipeBaseTitle.png";
+import "./Navbar.css";
 
 const Navbar = () => {
     const { navbarElement, changeNavbarItem } = useContext(NavbarContext) as NavbarContextType;
@@ -10,7 +12,7 @@ const Navbar = () => {
             <nav className="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
                 <div className="container-fluid">
                     <a className="navbar-brand" href="#">
-                        Recipe Base
+                        <img className="navbarTitle" src={titleImage} alt="RecipeBase" />
                     </a>
                     <button
                         className="navbar-toggler"

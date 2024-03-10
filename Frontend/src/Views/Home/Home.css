@@ -1,0 +1,9 @@
+.homeMainContainer {
+    display: grid;
+    grid-template-rows: 20% 1fr;
+    place-items: center;
+}
+
+.homeLogo {
+    height: 10rem;
+}
