@@ -1,0 +1,56 @@
+.mainAddRecipeContainer {
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.addRecipeContainer {
+    width: 50%;
+    display: grid;
+    grid-template-rows: auto;
+    gap: 1rem;
+}
+
+.textInputStyle {
+    border: 1px solid #d3d3d3;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    min-height: 2rem;
+    font-style: italic;
+    font-weight: bold;
+    font-family: 'Comic Sans MS', cursive;
+    color: #d3d3d3;
+    overflow: hidden;
+}
+
+.ingredientsList {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.ingredientInputBox {
+    display: grid;
+    grid-template-columns: 1fr 2.5rem;
+    padding: 0;
+}
+
+.ingredientInput {
+    width: 100%;
+    background-color: inherit;
+    color: #d3d3d3;
+    border: none;
+    border-bottom: 1px dotted #d3d3d3;
+    padding-left: 0.2rem
+}
+
+.ingredientButton {
+    width: 100%;
+    background-color: gray;
+    color: black;
+    font-size: 1rem;
+    border: 1px #d3d3d3 solid;
+    border-radius: 10px;
+}
