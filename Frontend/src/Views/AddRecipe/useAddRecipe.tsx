@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Ingredient from "../../Components/AddRecipe/Ingredient";
 
 export default function useAddRecipe() {
     // const [ingredients, setIngredients] = useState<string[]>([]);
@@ -12,10 +13,11 @@ export default function useAddRecipe() {
         setIngredientsJSX((prev) => [
             ...prev,
             <div className="ingredientInputBox">
-                <input placeholder="Ingredient..." className="ingredientInput" type="text" />
+                {/* <input placeholder="Ingredient..." className="ingredientInput" type="text" />
                 <button className="ingredientButton" onClick={deleteMe}>
                     X
-                </button>
+                </button> */}
+                <Ingredient />
             </div>,
         ]);
     }
